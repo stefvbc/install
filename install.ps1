@@ -3,7 +3,7 @@
 Function main() {
 
     $wallpaper = "https://raw.githubusercontent.com/stefvbc/install/main/wallpaper.jpg";
-    $teamviewer = "https://raw.githubusercontent.com/stefvbc/install/main/TeamViewerVBC.exe";
+    $teamviewer = "https://raw.githubusercontent.com/stefvbc/install/main/teamviewer.exe";
     $folder = "C:\VBC NV"
 
     $exists = Test-CommandExists winget
