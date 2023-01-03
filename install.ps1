@@ -3,6 +3,7 @@
 Function main() {
 
     $wallpaper = "https://raw.githubusercontent.com/stefvbc/install/main/wallpaper.jpg";
+    $teamviewer = "https://raw.githubusercontent.com/stefvbc/install/main/TeamViewerVBC.exe";
     $folder = "C:\VBC NV"
 
     $exists = Test-CommandExists winget
@@ -18,7 +19,7 @@ Function main() {
     if(!(Test-Path -Path $folder)){
         New-Item -Path $folder -ItemType Directory | Out-Null
     }
-
+    Invoke-WebRequest -Uri $teamviewer -OutFile "~\Desktop\TeamViewer VBC.exe"
     Invoke-WebRequest -Uri $wallpaper -OutFile "$folder\wallpaper.jpg"
     Set-Wallpaper("$folder\wallpaper.jpg")
 }
