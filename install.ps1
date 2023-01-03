@@ -19,9 +19,9 @@ Function main() {
     if(!(Test-Path -Path $folder)){
         New-Item -Path $folder -ItemType Directory | Out-Null
     }
-    Invoke-WebRequest -Uri $teamviewer -OutFile "~\Desktop\TeamViewer VBC.exe"
     Invoke-WebRequest -Uri $wallpaper -OutFile "$folder\wallpaper.jpg"
     Set-Wallpaper("$folder\wallpaper.jpg")
+    Invoke-WebRequest -Uri $teamviewer -OutFile "~\Desktop\TeamViewer VBC.exe"
 }
 
 Function Test-CommandExists
